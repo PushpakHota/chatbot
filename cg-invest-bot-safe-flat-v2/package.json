@@ -1,0 +1,17 @@
+{
+  "name": "cg-invest-bot-safe",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Secure Chhattisgarh Industrial Investment chatbot built with Next.js and Anthropic.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.80.0",
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  }
+}
