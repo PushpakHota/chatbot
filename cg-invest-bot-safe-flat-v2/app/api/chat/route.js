@@ -1,5 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { SYSTEM_PROMPT } from "../../../lib/systemPrompt";
+import { buildSystemPrompt } from "../../../lib/prompt/buildSystemPrompt";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -57,11 +57,12 @@ export async function POST(request) {
 
     const client = buildClient();
     const model = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-6";
+    const system = buildSystemPrompt(messages);
 
     const response = await client.messages.create({
       model,
-      max_tokens: 1400,
-      system: SYSTEM_PROMPT,
+      max_tokens: 1800,
+      system,
       messages,
     });
 
