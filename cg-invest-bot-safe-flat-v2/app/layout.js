@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "CG Industrial Investment Assistant",
-  description: "Secure Chhattisgarh Industrial Investment chatbot built with Next.js and Anthropic.",
+  title: "CG Investment Assistant",
+  description: "Investor-facing Chhattisgarh industrial investment assistant",
 };
 
 export default function RootLayout({ children }) {
